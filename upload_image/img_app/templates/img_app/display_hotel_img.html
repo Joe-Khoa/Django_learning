@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  </head>
+<style >
+  .block_img {
+    float: left;
+  }
+  .upload_more{
+    clear: both !important;
+  }
+  .block_container{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-right: auto !important;
+    padding-left: auto !important;
+
+  }
+</style>
+  <body>
+  <div class="container justify-content-center">
+    <div class="block_container ">
+
+      {% for hotel_img in hotel_imgs%}
+        <div class="block_img p-2">
+          <h2> {{hotel_img.name}}</h2>
+          <img style = "width:300px; high:200px" class="image-responsive" src="{{hotel_img.hotel_img.url}}" alt="">
+        </div>
+      {% endfor %}
+    </div>
+    <div class="upload_more">
+        <button  class=" btn btn-success" type="button" name="button">
+          <a class="text-white" href="image_upload">Upload More</a>
+        </button>
+    </div>
+  </div>
+  </body>
+</html>

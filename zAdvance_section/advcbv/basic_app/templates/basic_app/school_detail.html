@@ -1,0 +1,26 @@
+{% extends "basic_app/basic_app_base.html"%}
+
+{% block body_block%}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/school_detail_style.css"%}">
+  <div class="jumbotron">
+    <h1>Welcome to the School Detail Page</h1>
+    <h3>School details : </h3>
+    <p>Name : {{school_detail.name}}</p>
+    <p>Principal: {{school_detail.principal}}</p>
+    <p>Location: {{school_detail.location}}</p>
+
+    <h3>Student details : </h3>
+    {% for student in school_detail.students.all %}
+        <p>{{student.name}} : {{student.age}} years old</p>
+    {% endfor %}
+  </div>
+
+  <div class="container">
+    <p class="button-ed"><a class="btn btn-primary" href="{% url "basic_app:update" pk=school_detail.pk %}">Update</a></p>
+    <p class="button-ed"><a class = "btn btn-danger" href="{% url "basic_app:delete" pk=school_detail.pk %}">Delete</a></p>
+  </div>
+
+
+
+{% endblock%}

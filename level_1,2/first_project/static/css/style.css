@@ -1,0 +1,21 @@
+body{
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: auto !important;
+  padding-right: auto !important;
+}
+
+img {
+  width: 300px;
+  height: 200px;
+}
+td {
+  padding-left: 50px;
+}
+
+.container{
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+
+
+}

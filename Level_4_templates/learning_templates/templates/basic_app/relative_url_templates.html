@@ -1,0 +1,18 @@
+{% extends "basic_app/base.html" %}
+{% block body_block %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/relative_style.css'%}">
+    <h1 class="d-flex justify-content-center" >Welcome to RELATIVE page</h1>
+    <ul>
+      <li>
+        <a href="{% url 'basic_app:other' %}">link to OTHER</a>
+      </li>
+      <li><a href="{% url 'admin:index' %}">link to ADMIN</a></li>
+      <li> <a href="{% url 'basic_app:index'%}"> link to INDEX</a></li>
+      <div class="">
+        RELATIVE : ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercit
+      </div>
+    </ul>
+{% endblock %}

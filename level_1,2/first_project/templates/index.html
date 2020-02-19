@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+  <link rel="stylesheet" href=" {%static "css/style.css" %}">
+  <head>
+    <meta charset="utf-8">
+    <title>This is index.html file</title>
+  </head>
+  <body>
+
+
+      <img src="{% static "images/1.jpg" %}" alt="" class="width: 300px; height:150px">
+      {{success}}
+      {% if web_list %}
+        <table>
+          <thead>
+            <th>Site Name</th>
+            <th>Date Access</th>
+          </thead>
+        {% for acc in web_list %}
+          <tr>
+            <td>{{acc.name}}</td>
+            <td>{{acc.date}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+      {% endif %}
+
+  </body>
+</html>

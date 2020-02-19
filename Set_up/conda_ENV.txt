@@ -1,0 +1,3 @@
+mydjangoenv
+djenv
+env36
